@@ -1,7 +1,7 @@
 {
   "Package": {
-    "Name": "@fathym-it/lcu-arcade",
-    "Description": "An LCU for installing @fathym-it/lcu-arcade.",
+    "Name": "Fathym Arcade",
+    "Description": "A carousel that displays open-source online games built with different frameworks and deployed together on one domain.",
     "Button": "Launch",
     "Image": "https://www.fathym.com/assets/images/logo.png",
     "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
