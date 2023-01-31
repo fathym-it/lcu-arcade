@@ -11,6 +11,7 @@
       "LowCodeUnit": {
         "Package": "fork|github://fathym-it/arcade-recipe",
         "Version": "latest",
+        "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
