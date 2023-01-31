@@ -1,0 +1,118 @@
+{
+  "Applications": {
+    "$1": {
+      "Application": {
+        "Description": "The landing page for the arcade'",
+        "Name": "Arcade Home Page"
+      },
+      "LookupConfig": {
+        "PathRegex": "/.*"
+      },
+      "LowCodeUnit": {
+        "Package": "fork|github://fathym-it/arcade-recipe",
+        "Version": "latest",
+        "Type": "GitHub"
+      },
+      "Processor": {
+        "BaseHref": "/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    },
+    "$2": {
+      "Application": {
+        "Description": "A simple, fast numbers game. Can you get it to read 2048?",
+        "Name": "2048"
+      },
+      "LookupConfig": {
+        "PathRegex": "/2048.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@fathym-arcade/twenty48",
+        "Version": "latest",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/2048/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    },
+    "$3": {
+      "Application": {
+        "Description": "Don't be led astray by this fun-styled maze game.",
+        "Name": "Astray"
+      },
+      "LookupConfig": {
+        "PathRegex": "/astray.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@fathym-arcade/astray",
+        "Version": "latest",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/astray/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    },
+    "$4": {
+      "Application": {
+        "Description": "Fly a bird while dodging poles.",
+        "Name": "Clumsy Bird"
+      },
+      "LookupConfig": {
+        "PathRegex": "/clumsy-bird.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@fathym-arcade/clumsy-bird",
+        "Version": "latest",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/clumsy-bird/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    },
+    "$5": {
+      "Application": {
+        "Description": "Inspired by Tetris. How far can you go?",
+        "Name": "Hextris"
+      },
+      "LookupConfig": {
+        "PathRegex": "/hextris.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@fathym-arcade/hextris",
+        "Version": "latest",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/hextris/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    },
+    "$6": {
+      "Application": {
+        "Description": "Pacman game with Thinky ghosts.",
+        "Name": "Pacman Canvas"
+      },
+      "LookupConfig": {
+        "PathRegex": "/pacman-canvas.*"
+      },
+      "LowCodeUnit": {
+        "Package": "@fathym-arcade/pacman-canvas",
+        "Version": "latest",
+        "Type": "NPM"
+      },
+      "Processor": {
+        "BaseHref": "/pacman-canvas/",
+        "DefaultFile": "index.html",
+        "Type": "DFS"
+      }
+    }
+  }
+}
