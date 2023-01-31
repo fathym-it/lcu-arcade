@@ -2,7 +2,7 @@
   "Applications": {
     "$1": {
       "Application": {
-        "Description": "The landing page for the arcade'",
+        "Description": "The landing page for the arcade",
         "Name": "Arcade Home Page"
       },
       "LookupConfig": {
@@ -112,6 +112,41 @@
         "BaseHref": "/pacman-canvas/",
         "DefaultFile": "index.html",
         "Type": "DFS"
+      }
+    }
+  },
+  "Environments": {
+    "$#.PrimaryEnvironment": {
+      "Artifacts": {
+        "svelte-build-release": {
+          "Name": "Svelte Build/Release",
+          "Output": "./public",
+          "Type": "GitHub",
+          "BuildCommand": "npm run build",
+          "InstallCommand": "npm ci",
+          "NPMRegistry": "https://registry.npmjs.org/"
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release": {
+          "Name": "GitHub Artifacts - Release",
+          "Path": "lcu-github-artifacts-release.yml",
+          "ArtifactLookups": ["svelte-build-release"],
+          "Templates": [
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+          ]
+        }
+      },
+      "Sources": {
+        "fork|github://fathym-it/arcade-recipe": {
+          "DevOpsActionTriggerLookups": ["github-artifacts-release"],
+          "Branches": ["main"],
+          "MainBranch": "main",
+          "Organization": "fathym-it",
+          "Repository": "arcade-recipe",
+          "Type": "GitHub"
+        }
       }
     }
   }
