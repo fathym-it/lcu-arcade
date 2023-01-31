@@ -128,8 +128,8 @@
         }
       },
       "DevOpsActions": {
-        "github-artifacts-release": {
-          "Name": "GitHub Artifacts - Release",
+        "github-artifacts-release-svelte": {
+          "Name": "GitHub Artifacts - Release - Svelte",
           "Path": "lcu-github-artifacts-release.yml",
           "ArtifactLookups": ["svelte-build-release"],
           "Templates": [
