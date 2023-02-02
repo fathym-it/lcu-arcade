@@ -9,7 +9,7 @@
         "PathRegex": "/.*"
       },
       "LowCodeUnit": {
-        "Package": "fork|github://fathym-it/arcade-recipe",
+        "SourceControlLookup": "fork|github://fathym-it/arcade-recipe",
         "Version": "latest",
         "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
@@ -146,6 +146,7 @@
           "MainBranch": "main",
           "Organization": "fathym-it",
           "Repository": "arcade-recipe",
+          "Name": "github://fathym-it/arcade-recipe",
           "Type": "GitHub"
         }
       }
