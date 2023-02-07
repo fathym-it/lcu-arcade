@@ -2,11 +2,8 @@
   "Package": {
     "Name": "Fathym Arcade",
     "Description": "A carousel that displays open-source online games built with different frameworks and deployed together on one domain.",
-    "Button": "Launch",
-    "Image": "https://www.fathym.com/assets/images/logo.png",
-    "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
-    "SuccessType": "Project"
-  },
-  "EaC": "./assets/eac.json",
-  "Parameters": "./assets/parameters.json"
+    "Image": "https://www.fathym.com/img/arcade.png",
+    "PreviewImage": "https://www.fathym.com/assets/images/fathym-arcade.png",
+    "UsesGit": true
+  }
 }
