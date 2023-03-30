@@ -3,5 +3,10 @@
       {
         "Type": "eac:projects|select"
       }
+    ],
+    "ORGANIZATION": [
+      {
+        "Type": "git:organizations|select"
+      }
     ]
 }

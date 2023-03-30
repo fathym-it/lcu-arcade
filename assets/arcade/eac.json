@@ -2,15 +2,16 @@
   "Applications": {
     "{{PROJECT_LOOKUP}}-arcade-home": {
       "Application": {
-        "Description": "The landing page for the arcade'",
+        "Description": "The landing page for the arcade",
         "Name": "Arcade Home Page"
       },
       "LookupConfig": {
         "PathRegex": "/.*"
       },
       "LowCodeUnit": {
-        "Package": "fork|github://fathym-it/arcade-recipe",
-        "Version": "latest",
+        "SourceControlLookup": "github://{{ORGANIZATION}}/arcade-recipe",
+        "Build": "latest",
+        "Path": "lcu-github-artifacts-release.yml",
         "Type": "GitHub"
       },
       "Processor": {
@@ -112,6 +113,42 @@
         "BaseHref": "/pacman-canvas/",
         "DefaultFile": "index.html",
         "Type": "DFS"
+      }
+    }
+  },
+  "Environments": {
+    "{{EaC.PrimaryEnvironment}}": {
+      "Artifacts": {
+        "svelte-build-release": {
+          "Name": "Svelte Build/Release",
+          "Output": "./public",
+          "Type": "GitHub",
+          "BuildCommand": "npm run build",
+          "InstallCommand": "npm ci",
+          "NPMRegistry": "https://registry.npmjs.org/"
+        }
+      },
+      "DevOpsActions": {
+        "github-artifacts-release-svelte": {
+          "Name": "GitHub Artifacts - Release - Svelte",
+          "Path": "lcu-github-artifacts-release.yml",
+          "ArtifactLookups": ["svelte-build-release"],
+          "Templates": [
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/_header.hbs.yml",
+            "https://raw.githubusercontent.com/lowcodeunit/infrastructure/master/github/actions/artifacts/release-flow.yml"
+          ]
+        }
+      },
+      "Sources": {
+        "fork|github://fathym-it/arcade-recipe": {
+          "DevOpsActionTriggerLookups": ["github-artifacts-release-svelte"],
+          "Branches": ["main"],
+          "MainBranch": "main",
+          "Organization": "{{ORGANIZATION}}",
+          "Repository": "arcade-recipe",
+          "Name": "github://{{ORGANIZATION}}/arcade-recipe",
+          "Type": "GitHub"
+        }
       }
     }
   },
