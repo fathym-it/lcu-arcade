@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "$1": {
+    "{{PROJECT_LOOKUP}}-arcade-home": {
       "Application": {
         "Description": "The landing page for the arcade'",
         "Name": "Arcade Home Page"
@@ -19,7 +19,7 @@
         "Type": "DFS"
       }
     },
-    "$2": {
+    "{{PROJECT_LOOKUP}}-arcade-2048": {
       "Application": {
         "Description": "A simple, fast numbers game. Can you get it to read 2048?",
         "Name": "2048"
@@ -38,7 +38,7 @@
         "Type": "DFS"
       }
     },
-    "$3": {
+    "{{PROJECT_LOOKUP}}-arcade-astray": {
       "Application": {
         "Description": "Don't be led astray by this fun-styled maze game.",
         "Name": "Astray"
@@ -57,7 +57,7 @@
         "Type": "DFS"
       }
     },
-    "$4": {
+    "{{PROJECT_LOOKUP}}-arcade-clumsy-bird": {
       "Application": {
         "Description": "Fly a bird while dodging poles.",
         "Name": "Clumsy Bird"
@@ -76,7 +76,7 @@
         "Type": "DFS"
       }
     },
-    "$5": {
+    "{{PROJECT_LOOKUP}}-arcade-hextris": {
       "Application": {
         "Description": "Inspired by Tetris. How far can you go?",
         "Name": "Hextris"
@@ -95,7 +95,7 @@
         "Type": "DFS"
       }
     },
-    "$6": {
+    "{{PROJECT_LOOKUP}}-arcade-pacman-canvas": {
       "Application": {
         "Description": "Pacman game with Thinky ghosts.",
         "Name": "Pacman Canvas"
@@ -112,6 +112,22 @@
         "BaseHref": "/pacman-canvas/",
         "DefaultFile": "index.html",
         "Type": "DFS"
+      }
+    }
+  },
+  "Projects": {
+    "{{PROJECT_LOOKUP}}": {
+      "ApplicationLookups": [
+        "{{PROJECT_LOOKUP}}-arcade-home",
+        "{{PROJECT_LOOKUP}}-arcade-2048",
+        "{{PROJECT_LOOKUP}}-arcade-astray",
+        "{{PROJECT_LOOKUP}}-arcade-clumsy-bird",
+        "{{PROJECT_LOOKUP}}-arcade-hextris",
+        "{{PROJECT_LOOKUP}}-arcade-pacman-canvas"
+      ],
+      "Project": {
+        "Name": "{{Package.Name}}",
+        "Description": "{{Package.Description}}"
       }
     }
   }

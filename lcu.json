@@ -7,6 +7,17 @@
     "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
     "SuccessType": "Project"
   },
-  "EaC": "./assets/eac.json",
-  "Parameters": "./assets/parameters.json"
+  "Configurations": {
+    "Full": {
+      "Name": "Fathym Arcade - Full",
+      "Description": "Fathym Arcade - Full",
+      "Phases": [
+        {
+          "Name": "Setup Arcade",
+          "Order": 1,
+          "Asset": "arcade"
+        }
+      ]
+    }
+  }
 }
