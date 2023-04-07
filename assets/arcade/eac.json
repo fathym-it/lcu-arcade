@@ -1,6 +1,6 @@
 {
   "Applications": {
-    "{{PROJECT.Lookup}}-arcade-home": {
+    "{{PROJECT_LOOKUP}}-arcade-home": {
       "Application": {
         "Description": "The landing page for the arcade",
         "Name": "Arcade Home Page"
@@ -20,7 +20,7 @@
         "Type": "DFS"
       }
     },
-    "{{PROJECT.Lookup}}-arcade-2048": {
+    "{{PROJECT_LOOKUP}}-arcade-2048": {
       "Application": {
         "Description": "A simple, fast numbers game. Can you get it to read 2048?",
         "Name": "2048"
@@ -39,7 +39,7 @@
         "Type": "DFS"
       }
     },
-    "{{PROJECT.Lookup}}-arcade-astray": {
+    "{{PROJECT_LOOKUP}}-arcade-astray": {
       "Application": {
         "Description": "Don't be led astray by this fun-styled maze game.",
         "Name": "Astray"
@@ -58,7 +58,7 @@
         "Type": "DFS"
       }
     },
-    "{{PROJECT.Lookup}}-arcade-clumsy-bird": {
+    "{{PROJECT_LOOKUP}}-arcade-clumsy-bird": {
       "Application": {
         "Description": "Fly a bird while dodging poles.",
         "Name": "Clumsy Bird"
@@ -77,7 +77,7 @@
         "Type": "DFS"
       }
     },
-    "{{PROJECT.Lookup}}-arcade-hextris": {
+    "{{PROJECT_LOOKUP}}-arcade-hextris": {
       "Application": {
         "Description": "Inspired by Tetris. How far can you go?",
         "Name": "Hextris"
@@ -96,7 +96,7 @@
         "Type": "DFS"
       }
     },
-    "{{PROJECT.Lookup}}-arcade-pacman-canvas": {
+    "{{PROJECT_LOOKUP}}-arcade-pacman-canvas": {
       "Application": {
         "Description": "Pacman game with Thinky ghosts.",
         "Name": "Pacman Canvas"
@@ -153,18 +153,18 @@
     }
   },
   "Projects": {
-    "{{PROJECT.Lookup}}": {
+    "{{PROJECT_LOOKUP}}": {
       "ApplicationLookups": [
-        "{{PROJECT.Lookup}}-arcade-home",
-        "{{PROJECT.Lookup}}-arcade-2048",
-        "{{PROJECT.Lookup}}-arcade-astray",
-        "{{PROJECT.Lookup}}-arcade-clumsy-bird",
-        "{{PROJECT.Lookup}}-arcade-hextris",
-        "{{PROJECT.Lookup}}-arcade-pacman-canvas"
+        "{{PROJECT_LOOKUP}}-arcade-home",
+        "{{PROJECT_LOOKUP}}-arcade-2048",
+        "{{PROJECT_LOOKUP}}-arcade-astray",
+        "{{PROJECT_LOOKUP}}-arcade-clumsy-bird",
+        "{{PROJECT_LOOKUP}}-arcade-hextris",
+        "{{PROJECT_LOOKUP}}-arcade-pacman-canvas"
       ],
       "Project": {
-        "Name": "{{PROJECT.Value.Name ?? Package.Name}}",
-        "Description": "{{Package.Description}}"
+        "Name": "{{EaC.Projects.ContainsKey(PROJECT_LOOKUP) ? EaC.Projects[PROJECT_LOOKUP]?.Project?.Name : Package.Name}}",
+        "Description": "{{EaC.Projects.ContainsKey(PROJECT_LOOKUP) ? EaC.Projects[PROJECT_LOOKUP]?.Project?.Description : Package.Description}}"
       }
     }
   }
