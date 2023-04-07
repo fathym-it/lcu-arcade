@@ -4,7 +4,8 @@
     "Prompts": [
       {
         "Type": "eac:projects|select",
-        "Optional": true
+        "Optional": true,
+        "OptionalText": "Create a project"
       },
       {
         "Type": "eac:projects|create",
