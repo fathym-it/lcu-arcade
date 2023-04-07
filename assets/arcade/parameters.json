@@ -1,17 +1,23 @@
 {
-  "PROJECT_LOOKUP": [
-    {
-      "Type": "eac:projects|select",
-      "Optional": true
-    },
-    {
-      "Type": "eac:projects|create",
-      "Prompt": "What name would you like to use for the new project?"
-    }
-  ],
-  "ORGANIZATION": [
-    {
-      "Type": "git:organizations|select"
-    }
-  ]
+  "PROJECT_LOOKUP": {
+    "Order": 1,
+    "Prompts": [
+      {
+        "Type": "eac:projects|select",
+        "Optional": true
+      },
+      {
+        "Type": "eac:projects|create",
+        "Prompt": "What name would you like to use for the new project?"
+      }
+    ]
+  },
+  "ORGANIZATION": {
+    "Order": 2,
+    "Prompts": [
+      {
+        "Type": "git:organizations|select"
+      }
+    ]
+  }
 }
