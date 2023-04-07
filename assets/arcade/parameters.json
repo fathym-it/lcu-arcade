@@ -5,7 +5,8 @@
       {
         "Type": "eac:projects|select",
         "Optional": true,
-        "OptionalText": "Create a project"
+        "OptionalText": "Create a project",
+        "Message": "Choose the project to deploy the Arcade to?"
       },
       {
         "Type": "eac:projects|create",
@@ -17,7 +18,8 @@
     "Order": 2,
     "Prompts": [
       {
-        "Type": "git:organizations|select"
+        "Type": "git:organizations|select",
+        "Message": "Which organization would you like to fork code into?"
       }
     ]
   }
