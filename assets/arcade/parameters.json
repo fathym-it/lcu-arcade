@@ -9,7 +9,7 @@
       },
       {
         "Type": "eac:projects|create",
-        "Prompt": "What name would you like to use for the new project?"
+        "Message": "What name would you like to use for the new project?"
       }
     ]
   },
