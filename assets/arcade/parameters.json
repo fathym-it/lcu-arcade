@@ -4,13 +4,10 @@
     "Prompts": [
       {
         "Type": "eac:projects|select",
-        "Optional": true,
-        "OptionalText": "Create a project",
-        "Message": "Choose the project to deploy the Arcade to?"
-      },
-      {
-        "Type": "eac:projects|create",
-        "Message": "What name would you like to use for the new project?"
+        "Message": "Choose the project to deploy the Arcade to?",
+        "Arguments": {
+          "CreateText": "Create a project"
+        }
       }
     ]
   },
