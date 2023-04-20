@@ -163,8 +163,8 @@
         "{{PROJECT_LOOKUP}}-arcade-pacman-canvas"
       ],
       "Project": {
-        "Name": "{{EaC.Projects.ContainsKey(PROJECT_LOOKUP) ? EaC.Projects[PROJECT_LOOKUP]?.Project?.Name : Package.Name}}",
-        "Description": "{{EaC.Projects.ContainsKey(PROJECT_LOOKUP) ? EaC.Projects[PROJECT_LOOKUP]?.Project?.Description : Package.Description}}"
+        "Name": "{{EaC.Projects.ContainsKey(PROJECT_LOOKUP) ? EaC.Projects[PROJECT_LOOKUP]?.Project?.Name : Package.Details.Name}}",
+        "Description": "{{EaC.Projects.ContainsKey(PROJECT_LOOKUP) ? EaC.Projects[PROJECT_LOOKUP]?.Project?.Description : Package.Details.Description}}"
       }
     }
   }
