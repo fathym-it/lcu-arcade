@@ -193,8 +193,8 @@
         "{{PROJECT_LOOKUP}}-arcade-pacman-canvas"
       ],
       "Details": {
-        "Name": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#with (lookup EaC.Projects PROJECT_LOOKUP)~}}{{Project.Name}}{{/with}}{{else}}{{Package.Details.Name}}{{/if}}",
-        "Description": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#with (lookup EaC.Projects PROJECT_LOOKUP)~}}{{Project.Description}}{{/with}}{{else}}{{Package.Details.Description}}{{/if}}"
+        "Name": "{{Package.Details.Name}}",
+        "Description": "{{Package.Details.Description}}"
       }
     }
   }
