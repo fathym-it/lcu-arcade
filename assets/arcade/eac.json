@@ -1,7 +1,7 @@
 {
   "Applications": {
     "{{PROJECT_LOOKUP}}-arcade-home": {
-      "Application": {
+      "Details": {
         "Description": "The landing page for the arcade",
         "Name": "Arcade Home Page"
       },
@@ -9,7 +9,7 @@
         "PathRegex": "/.*"
       },
       "Package": {
-        "Package": {
+        "Details": {
           "Build": "latest",
           "Path": "lcu-github-artifacts-release.yml"
         },
@@ -17,7 +17,7 @@
         "Type": "GitHub"
       },
       "Processor": {
-        "Processor": {
+        "Details": {
           "BaseHref": "/",
           "DefaultFile": "index.html"
         },
@@ -25,7 +25,7 @@
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-2048": {
-      "Application": {
+      "Details": {
         "Description": "A simple, fast numbers game. Can you get it to read 2048?",
         "Name": "2048"
       },
@@ -33,14 +33,14 @@
         "PathRegex": "/2048.*"
       },
       "Package": {
-        "Package": {
+        "Details": {
           "Package": "@fathym-arcade/twenty48",
           "Version": "latest"
         },
         "Type": "NPM"
       },
       "Processor": {
-        "Processor": {
+        "Details": {
           "BaseHref": "/2048/",
           "DefaultFile": "index.html"
         },
@@ -48,7 +48,7 @@
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-astray": {
-      "Application": {
+      "Details": {
         "Description": "Don't be led astray by this fun-styled maze game.",
         "Name": "Astray"
       },
@@ -56,14 +56,14 @@
         "PathRegex": "/astray.*"
       },
       "Package": {
-        "Package": {
+        "Details": {
           "Package": "@fathym-arcade/astray",
           "Version": "latest"
         },
         "Type": "NPM"
       },
       "Processor": {
-        "Processor": {
+        "Details": {
           "BaseHref": "/astray/",
           "DefaultFile": "index.html"
         },
@@ -71,7 +71,7 @@
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-clumsy-bird": {
-      "Application": {
+      "Details": {
         "Description": "Fly a bird while dodging poles.",
         "Name": "Clumsy Bird"
       },
@@ -79,14 +79,14 @@
         "PathRegex": "/clumsy-bird.*"
       },
       "Package": {
-        "Package": {
+        "Details": {
           "Package": "@fathym-arcade/clumsy-bird",
           "Version": "latest"
         },
         "Type": "NPM"
       },
       "Processor": {
-        "Processor": {
+        "Details": {
           "BaseHref": "/clumsy-bird/",
           "DefaultFile": "index.html"
         },
@@ -94,7 +94,7 @@
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-hextris": {
-      "Application": {
+      "Details": {
         "Description": "Inspired by Tetris. How far can you go?",
         "Name": "Hextris"
       },
@@ -102,14 +102,14 @@
         "PathRegex": "/hextris.*"
       },
       "Package": {
-        "Package": {
+        "Details": {
           "Package": "@fathym-arcade/hextris",
           "Version": "latest"
         },
         "Type": "NPM"
       },
       "Processor": {
-        "Processor": {
+        "Details": {
           "BaseHref": "/hextris/",
           "DefaultFile": "index.html"
         },
@@ -117,7 +117,7 @@
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-pacman-canvas": {
-      "Application": {
+      "Details": {
         "Description": "Pacman game with Thinky ghosts.",
         "Name": "Pacman Canvas"
       },
@@ -125,14 +125,14 @@
         "PathRegex": "/pacman-canvas.*"
       },
       "Package": {
-        "Package": {
+        "Details": {
           "Package": "@fathym-arcade/pacman-canvas",
           "Version": "latest"
         },
         "Type": "NPM"
       },
       "Processor": {
-        "Processor": {
+        "Details": {
           "BaseHref": "/pacman-canvas/",
           "DefaultFile": "index.html"
         },
@@ -145,7 +145,7 @@
       "Artifacts": {
         "svelte-build-release": {
           "Type": "GitHub",
-          "Artifact": {
+          "Details": {
             "Name": "Svelte Build/Release",
             "Output": "./public",
             "BuildCommand": "npm run build",
@@ -157,7 +157,7 @@
       "DevOpsActions": {
         "github-artifacts-release-svelte": {
           "ArtifactLookups": ["svelte-build-release"],
-          "DevOpsAction": {
+          "Details": {
             "Name": "GitHub Artifacts - Release - Svelte",
             "Path": "lcu-github-artifacts-release.yml",
             "Templates": [
@@ -170,7 +170,7 @@
       "Sources": {
         "fork|github://fathym-it/arcade-recipe": {
           "DevOpsActionTriggerLookups": ["github-artifacts-release-svelte"],
-          "Source": {
+          "Details": {
             "Branches": ["main"],
             "MainBranch": "main",
             "Organization": "{{ORGANIZATION}}",
@@ -192,7 +192,7 @@
         "{{PROJECT_LOOKUP}}-arcade-hextris",
         "{{PROJECT_LOOKUP}}-arcade-pacman-canvas"
       ],
-      "Project": {
+      "Details": {
         "Name": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#with (lookup EaC.Projects PROJECT_LOOKUP)~}}{{Project.Name}}{{/with}}{{else}}{{Package.Details.Name}}{{/if}}",
         "Description": "{{#if (lookup EaC.Projects PROJECT_LOOKUP)}}{{#with (lookup EaC.Projects PROJECT_LOOKUP)~}}{{Project.Description}}{{/with}}{{else}}{{Package.Details.Description}}{{/if}}"
       }
