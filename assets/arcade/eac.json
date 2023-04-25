@@ -140,13 +140,14 @@
         }
       },
       "Sources": {
-        "fork|github://fathym-it/arcade-recipe": {
+        "github://{{ORGANIZATION}}/arcade-recipe": {
           "DevOpsActionTriggerLookups": ["github-artifacts-release-svelte"],
           "Branches": ["main"],
           "MainBranch": "main",
           "Organization": "{{ORGANIZATION}}",
           "Repository": "arcade-recipe",
           "Name": "github://{{ORGANIZATION}}/arcade-recipe",
+          "Fork": "github://fathym-it/arcade-recipe",
           "Type": "GitHub"
         }
       }
