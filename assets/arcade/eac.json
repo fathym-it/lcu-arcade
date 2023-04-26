@@ -14,14 +14,14 @@
           "Path": "lcu-github-artifacts-release.yml"
         },
         "SourceControlLookup": "github://{{ORGANIZATION}}/arcade-recipe",
-        "Type": "GitHub"
+        "Type": "GitHubLowCodeUnit"
       },
       "Processor": {
         "Details": {
           "BaseHref": "/",
           "DefaultFile": "index.html"
         },
-        "Type": "DFS"
+        "Type": "DFSProcessor"
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-2048": {
@@ -37,14 +37,14 @@
           "Package": "@fathym-arcade/twenty48",
           "Version": "latest"
         },
-        "Type": "NPM"
+        "Type": "NPMLowCodeUnit"
       },
       "Processor": {
         "Details": {
           "BaseHref": "/2048/",
           "DefaultFile": "index.html"
         },
-        "Type": "DFS"
+        "Type": "DFSProcessor"
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-astray": {
@@ -60,14 +60,14 @@
           "Package": "@fathym-arcade/astray",
           "Version": "latest"
         },
-        "Type": "NPM"
+        "Type": "NPMLowCodeUnit"
       },
       "Processor": {
         "Details": {
           "BaseHref": "/astray/",
           "DefaultFile": "index.html"
         },
-        "Type": "DFS"
+        "Type": "DFSProcessor"
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-clumsy-bird": {
@@ -83,14 +83,14 @@
           "Package": "@fathym-arcade/clumsy-bird",
           "Version": "latest"
         },
-        "Type": "NPM"
+        "Type": "NPMLowCodeUnit"
       },
       "Processor": {
         "Details": {
           "BaseHref": "/clumsy-bird/",
           "DefaultFile": "index.html"
         },
-        "Type": "DFS"
+        "Type": "DFSProcessor"
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-hextris": {
@@ -106,14 +106,14 @@
           "Package": "@fathym-arcade/hextris",
           "Version": "latest"
         },
-        "Type": "NPM"
+        "Type": "NPMLowCodeUnit"
       },
       "Processor": {
         "Details": {
           "BaseHref": "/hextris/",
           "DefaultFile": "index.html"
         },
-        "Type": "DFS"
+        "Type": "DFSProcessor"
       }
     },
     "{{PROJECT_LOOKUP}}-arcade-pacman-canvas": {
@@ -129,14 +129,14 @@
           "Package": "@fathym-arcade/pacman-canvas",
           "Version": "latest"
         },
-        "Type": "NPM"
+        "Type": "NPMLowCodeUnit"
       },
       "Processor": {
         "Details": {
           "BaseHref": "/pacman-canvas/",
           "DefaultFile": "index.html"
         },
-        "Type": "DFS"
+        "Type": "DFSProcessor"
       }
     }
   },
@@ -144,7 +144,7 @@
     "{{EaC.PrimaryEnvironment}}": {
       "Artifacts": {
         "svelte-build-release": {
-          "Type": "GitHub",
+          "Type": "GitHubArtifact",
           "Details": {
             "Name": "Svelte Build/Release",
             "Output": "./public",
@@ -177,7 +177,7 @@
             "Repository": "arcade-recipe",
             "Name": "github://{{ORGANIZATION}}/arcade-recipe"
           },
-          "Type": "GitHub"
+          "Type": "GitHubSourceControl"
         }
       }
     }
