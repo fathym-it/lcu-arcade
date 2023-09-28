@@ -13,11 +13,11 @@
   },
   "Configurations": {
     "Full": {
-      "Name": "Fathym Arcade - Full",
-      "Description": "Fathym Arcade - Full",
+      "Name": "Fathym Arcade",
+      "Description": "Fathym Arcade",
       "Phases": [
         {
-          "Name": "Setup Arcade",
+          "Name": "Setting Up Fathym Arcade",
           "Order": 1,
           "Asset": "arcade"
         }
