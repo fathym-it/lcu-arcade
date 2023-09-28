@@ -4,24 +4,6 @@
     "Description": "A carousel that displays open-source online games built with different frameworks and deployed together on one domain.",
     "Image": "https://www.fathym.com/assets/images/logo.png",
     "PreviewImage": "https://www.fathym.com/assets/images/logo.png",
-    "Intents": [
-      "Arcade",
-      "Getting started",
-      "Website",
-      "Application"
-    ]
-  },
-  "Configurations": {
-    "Full": {
-      "Name": "Fathym Arcade - Full",
-      "Description": "Fathym Arcade - Full",
-      "Phases": [
-        {
-          "Name": "Setup Arcade",
-          "Order": 1,
-          "Asset": "arcade"
-        }
-      ]
-    }
+    "UsesGit": true
   }
 }
